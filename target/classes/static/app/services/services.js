@@ -1,5 +1,5 @@
 'use strict';
-angular.module('services.factory', ['ngRoute'])
+angular.module('services.factory', ['ngRoute','ngResource'])
 
     .factory('fabrica', function () {
         var data = {
@@ -12,4 +12,8 @@ angular.module('services.factory', ['ngRoute'])
             addTodo: function (todo) {
                 data.listado.push(todo);
             }};
-    });
+    })
+
+     .factory('tareas', function($resource) {
+             return $resource('/tareas/:tarea');
+         });

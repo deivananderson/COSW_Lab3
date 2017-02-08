@@ -2,14 +2,14 @@
 
 <p> Ingresar tarea: </p>
 
-<div>
+<div class="container">
 
   <form>
-    <label>Descripción: <input type="text" ng-model="descripcion" /></label><br />
-    <label>Prioridad: <input type="number" ng-model="prioridad" /></label><br />
+    <label>Descripción: <input type="text" ng-model="descripcion" class="form-control"/></label><br />
+    <label>Prioridad: <input type="number" ng-model="prioridad" max="10" min="1" class="form-control"/></label><br />
 
-    <input type="button" ng-click="guardar()" value="Guardar" />
+    <input type="button" ng-click="guardar()" value="Guardar" class="btn btn-primary"/>
   </form>
-  
+
 
 </div>

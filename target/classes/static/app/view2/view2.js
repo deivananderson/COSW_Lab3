@@ -9,13 +9,14 @@ angular.module('myApp.view2', ['ngRoute'])
   });
 }])
 
-.controller('View2Ctrl', ['$scope', 'fabrica', function($scope, fabrica) {
+.controller('View2Ctrl', ['$scope', 'tareas', function($scope, tareas) {
 
     $scope.descripcion;
     $scope.prioridad;
 
     $scope.guardar = function(){
-        fabrica.addTodo({'descripcion':$scope.descripcion,'prioridad':$scope.prioridad});
+        //fabrica.addTodo({'descripcion':$scope.descripcion,'prioridad':$scope.prioridad});
+        tareas.save({'descripcion':$scope.descripcion,'prioridad':$scope.prioridad});
     };
 
 }]);

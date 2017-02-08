@@ -9,8 +9,8 @@ angular.module('myApp.view3', ['ngRoute'])
   });
 }])
 
-.controller('View3Ctrl', ['$scope','fabrica',function($scope,fabrica) {
+.controller('View3Ctrl', ['$scope','tareas',function($scope,tareas) {
 
-     $scope.listado=fabrica.getListado();
+     $scope.listado=tareas.query();
 
 }]);
