@@ -1,0 +1,29 @@
+<p>Bienvenidos a Directorio Clientes:</p>
+<p>Aplicacion COSW:</p>
+
+
+<div class="container">
+    <p>Tabla:</p>
+    <div class="table table-responsive">
+        <table class="table table-striped table-hover">
+            <tbody>
+            <tr>
+                <th>Identificación</th>
+                <th>Nombre</th>
+                <th>Fotografia</th>
+                <th>Detalles</th>
+            </tr>
+            <tr ng-repeat="cl in clientList">
+                <td>{{cl.id}}</td>
+                <td>{{cl.name}}</td>
+                <td><image src="/clients/{{cl.id}}/picture" alt="" width="80" height="100"/></td>
+                <td>
+                    <md-button class="md-primary md-raised" ng-click="showAlert($event,cl)">
+                        Detalles
+                    </md-button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

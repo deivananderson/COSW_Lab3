@@ -9,11 +9,12 @@
   <title>My AngularJS App</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <!-- AngularJS Material CSS now available via Google CDN; version 1.0.7 used here -->
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
   <link rel="stylesheet" href="bower_components/bootstrap-css-only/css/bootstrap.css">
   <link rel="stylesheet" href="app.css">
-  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+
+
 </head>
 <body>
   <ul class="menu">
@@ -22,7 +23,8 @@
     <li ng-show="authenticated"><a href="#!/view2">view2</a></li>
     <li ng-show="authenticated"><a href="#!/view3">view3</a></li>
     <li ng-show="!authenticated"><a href="#!/login">logIn</a></li>
-    <li ng-show="authenticated"><a href="#!/login" ng-controller="LogOut" ng-click="logout()">logOut</a></li>
+    <li ng-show="authenticated"><a href="#!/clients">Clients</a></li>
+    <li ng-show="authenticated"><a href="#!/login" ng-controller="LogOut" ng-click="logout()">logout</a></li>
   </ul>
 
   <!--[if lt IE 7]>
@@ -36,6 +38,9 @@
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
+
+
+
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="app.js"></script>
@@ -43,10 +48,19 @@
   <script src="view2/view2.js"></script>
   <script src="view3/view3.js"></script>
   <script src="login/login.js"></script>
+  <script src="clients/clients.js"></script>
   <script src="services/services.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <!-- AngularJS Material Dependencies -->
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.js"></script>
+
+
+  <!-- AngularJS Material Javascript now available via Google CDN; version 1.0.7 used here -->
+  <script src="bower_components/angular-material/angular-material.js"></script>
+
 </body>
 </html>

@@ -14,6 +14,22 @@ angular.module('services.factory', ['ngRoute','ngResource'])
             }};
     })
 
+    .factory('addTarea', function($resource) {
+                 var nuevaTarea = $resource('/tareas/agregar');
+                 return nuevaTarea;
+    })
+
      .factory('tareas', function($resource) {
-             return $resource('/tareas/:tarea');
-         });
+             var Tareas = $resource('/tareas/:tarea');
+             return Tareas;
+    })
+
+    .factory('Clients', function($resource){
+            return $resource('/clients',{},{
+                get: {
+                    method: 'GET',
+                    isArray: true
+                }
+            });
+
+     });

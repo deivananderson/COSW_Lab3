@@ -1,19 +1,20 @@
 <p>This is the partial for view 3.</p>
 
+
 <div class="container">
-<p>Tabla:</p>
-<div class="table table-responsive">
-    <table class="table table-striped table-hover">
-        <tbody>
-        <tr>
-            <th>Descripcion</th>
-            <th>Prioridad</th>
-        </tr>
-        <tr ng-repeat="todo in listado">
-            <td>{{todo.descripcion}}</td>
-            <td>{{todo.prioridad}}</td>
-        </tr>
-        </tbody>
-    </table>
-</div>
+    <p>Tabla:</p>
+    <div class="table table-responsive">
+        <table class="table table-striped table-hover">
+            <tbody>
+            <tr>
+                <th>Descripcion</th>
+                <th>Prioridad</th>
+            </tr>
+            <tr ng-repeat="todo in listado">
+                <td>{{todo.descripcion}}</td>
+                <td>{{todo.prioridad}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

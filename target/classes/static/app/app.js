@@ -1,14 +1,16 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('myApp', [
+angular.module('myApp',[
   'ngRoute',
+  'ngMaterial',
   'myApp.view1',
   'myApp.view2',
   'myApp.view3',
   'myApp.login',
   'services.factory',
-  'myApp.version'
+  'myApp.version',
+  'myApp.clients'
 ]).
 config(['$routeProvider','$httpProvider', function($routeProvider, $httpProvider) {
 $routeProvider.otherwise({redirectTo: '/login'});
@@ -20,7 +22,7 @@ $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     $scope.logout = function () {
                     $http.post('/logout', {}).success(function () {
                         $rootScope.authenticated = false;
-                        $location.path("/login");
+                        $location.path("/");
                     }).error(function (data) {
                         $rootScope.authenticated = false;
                     });

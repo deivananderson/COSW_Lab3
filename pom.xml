@@ -52,6 +52,12 @@
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>edu2.eci.cosw.stubs</groupId>
+			<artifactId>FakeClientsLibrary</artifactId>
+			<version>1.0</version>
+		</dependency>
+
 
 	</dependencies>
 
@@ -80,6 +86,10 @@
 			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>
+		</repository>
+		<repository>
+			<id>ECI internal repository</id>
+			<url>http://profesores.is.escuelaing.edu.co/hcadavid/mvnmirror</url>
 		</repository>
 	</repositories>
 	<pluginRepositories>
